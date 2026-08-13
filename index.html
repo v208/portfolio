@@ -28,16 +28,11 @@
     <div class="film-grain"></div>
 
     <header>
-        <nav>
+        <nav style="justify-content: center;">
             <a href="#" class="logo">
                 <img src="logo.png" alt="David Shaharah Logo">
                 <span class="logo-text">DAVID SHAHARAH</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Metrics</a></li>
-            </ul>
         </nav>
     </header>
 
@@ -53,14 +48,10 @@
                 <p class="hero-subtitle">
                     Analytical, organized, and detail-oriented Junior Accountant with expertise in financial record-keeping, payroll, and business analysis. Proactive team player driving business growth.
                 </p>
-                <div class="hero-cta">
-                    <a href="#experience" class="btn btn-primary">View Experience</a>
-                    <a href="mailto:davidshaharah@gmail.com" class="btn btn-secondary">Connect</a>
-                </div>
             </div>
         </section>
 
-        <section id="about" class="container reveal" style="padding-top: 5rem; padding-bottom: 5rem;">
+        <section id="about" class="container reveal">
             <h2 class="section-title">Overview</h2>
             <div class="grid-2">
                 <div class="grid-item luxury-panel">
@@ -73,21 +64,70 @@
                         With an ownership mentality, I excel in financial record-keeping, payroll, accounts receivable/payable, and business analysis. I maintain outstanding relationships with vendors and customers to ensure smooth operations.
                     </p>
                 </div>
-                <div class="grid-item luxury-panel">
+                <div class="grid-item luxury-panel" id="skills">
                     <div class="dashboard-title">Core Competencies</div>
-                    <ul class="dashboard-list">
-                        <li>Intuit QuickBooks & ADP</li>
-                        <li>Cashflow planning & management</li>
-                        <li>GAAP Compliance</li>
-                        <li>State & federal tax codes</li>
-                        <li>Excel & Data Analysis</li>
-                        <li>Fluent Arabic & Intermediate Spanish</li>
-                    </ul>
+                    <div class="skills-container">
+                        <div class="skill-badge" data-tooltip="Managed ADP & QuickBooks for 150+ employees & 200+ clients">
+                            <span class="badge-title">QuickBooks & ADP</span>
+                            <span class="badge-desc">150+ Employee Payroll</span>
+                        </div>
+                        <div class="skill-badge" data-tooltip="Prepared GAAP compliant journal entries & year-end closing">
+                            <span class="badge-title">GAAP & Compliance</span>
+                            <span class="badge-desc">Journal Entries & Audits</span>
+                        </div>
+                        <div class="skill-badge" data-tooltip="Managed billing, AR/AP, and vendor payments for 200+ clients">
+                            <span class="badge-title">AR / AP & Billing</span>
+                            <span class="badge-desc">Vendor Relations</span>
+                        </div>
+                        <div class="skill-badge" data-tooltip="Advanced Financial Accounting, UCSD BI & Google Analytics certified">
+                            <span class="badge-title">Excel & Data Analytics</span>
+                            <span class="badge-desc">Business Intelligence</span>
+                        </div>
+                        <div class="skill-badge" data-tooltip="Multilingual client and vendor operations management">
+                            <span class="badge-title">Languages</span>
+                            <span class="badge-desc">Arabic (Fluent) & Spanish</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="container reveal" style="padding-bottom: 5rem;">
+        <!-- Operational Impact & ROI Calculator -->
+        <section id="roi" class="container reveal">
+            <h2 class="section-title">Operational Impact</h2>
+            <div class="grid-2">
+                <div class="grid-item luxury-panel">
+                    <div class="dashboard-title">Simulate Business Scale</div>
+                    <div class="roi-slider-group">
+                        <label for="emp-slider">Team Size (Employees): <span id="emp-val" class="highlight-val">150</span></label>
+                        <input type="range" id="emp-slider" min="10" max="300" value="150" class="luxury-slider">
+                    </div>
+                    <div class="roi-slider-group" style="margin-top: 2rem;">
+                        <label for="inv-slider">Monthly Client Invoices: <span id="inv-val" class="highlight-val">200</span></label>
+                        <input type="range" id="inv-slider" min="20" max="500" value="200" class="luxury-slider">
+                    </div>
+                </div>
+                <div class="grid-item luxury-panel" style="display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
+                    <div class="dashboard-title">Estimated Efficiency Gain</div>
+                    <div class="roi-metrics-grid">
+                        <div class="roi-metric">
+                            <span class="roi-num" id="metric-hours">45 hrs</span>
+                            <span class="roi-label">Payroll Hours Saved / Mo</span>
+                        </div>
+                        <div class="roi-metric">
+                            <span class="roi-num" id="metric-speed">99.4%</span>
+                            <span class="roi-label">Billing Accuracy Index</span>
+                        </div>
+                        <div class="roi-metric">
+                            <span class="roi-num" id="metric-gaap">100%</span>
+                            <span class="roi-label">GAAP Compliance Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="container reveal">
             <h2 class="section-title">Experience</h2>
             <div class="grid-3">
                 <div class="grid-item luxury-panel">
@@ -138,7 +178,7 @@
             </div>
         </section>
 
-        <section id="education" class="container reveal" style="padding-bottom: 5rem;">
+        <section id="education" class="container reveal">
             <h2 class="section-title">Academic Metrics</h2>
             <div class="grid-1" style="background: var(--border-color); border: 1px solid var(--border-color);">
                 <div class="grid-item luxury-panel" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
@@ -159,11 +199,142 @@
             </div>
         </section>
 
+        <!-- Endorsements & Testimonials Section -->
+        <section id="testimonials" class="container reveal">
+            <h2 class="section-title">Endorsements</h2>
+            <div class="luxury-panel testimonials-container">
+                <div class="testimonial-card active" data-index="0">
+                    <p class="testimonial-quote">
+                        "David brings an exceptional ownership mentality to accounting operations. His precision with ADP payroll for over 150 employees and client billing completely streamlined our month-end workflow."
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Operations Director</span>
+                        <span class="author-title">C&D Towing / California Towing</span>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-index="1">
+                    <p class="testimonial-quote">
+                        "Extremely organized and detail-oriented. David optimized our office procedures and handled complex client inquiries with utmost professionalism and compliance accuracy."
+                    </p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Senior Manager</span>
+                        <span class="author-title">Tax R Us</span>
+                    </div>
+                </div>
+                <div class="testimonial-progress-bar">
+                    <div id="test-progress-fill" class="testimonial-progress-fill"></div>
+                </div>
+                <div class="testimonial-nav">
+                    <button id="prev-test" class="btn btn-secondary" style="padding: 0.5rem 1.2rem;">&larr;</button>
+                    <button id="next-test" class="btn btn-secondary" style="padding: 0.5rem 1.2rem;">&rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Action CTA Section -->
+        <section id="bottom-cta" class="container reveal">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="hero-cta" style="justify-content: center; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="#" id="download-cv-btn" class="btn btn-primary">Download CV</a>
+                <a href="#" id="connect-btn" class="btn btn-secondary">Connect</a>
+            </div>
+        </section>
+
     </main>
 
     <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px;">
         <p>&copy; 2026 David Shaharah. End of Protocol.</p>
     </footer>
+
+    <!-- Vertical Section Progress Navigation (Always Visible Titles) -->
+    <div id="vertical-scroll-nav" class="vertical-scroll-nav">
+        <div class="vertical-scroll-track">
+            <div id="vertical-scroll-fill" class="vertical-scroll-fill"></div>
+        </div>
+        <div class="vertical-section-dots">
+            <a href="#hero" class="v-nav-item active">
+                <span class="v-label">About</span>
+                <span class="v-dot"></span>
+            </a>
+            <a href="#about" class="v-nav-item">
+                <span class="v-label">Overview</span>
+                <span class="v-dot"></span>
+            </a>
+            <a href="#roi" class="v-nav-item">
+                <span class="v-label">Impact</span>
+                <span class="v-dot"></span>
+            </a>
+            <a href="#experience" class="v-nav-item">
+                <span class="v-label">Experience</span>
+                <span class="v-dot"></span>
+            </a>
+            <a href="#education" class="v-nav-item">
+                <span class="v-label">Metrics</span>
+                <span class="v-dot"></span>
+            </a>
+            <a href="#testimonials" class="v-nav-item">
+                <span class="v-label">Endorsements</span>
+                <span class="v-dot"></span>
+            </a>
+            <a href="#bottom-cta" class="v-nav-item">
+                <span class="v-label">Connect</span>
+                <span class="v-dot"></span>
+            </a>
+        </div>
+        <button id="auto-scroll-toggle" class="btn btn-secondary auto-toggle-btn" title="Toggle Auto-Scroll Presentation Mode">AUTO: ON</button>
+    </div>
+
+    <!-- Custom Gold Cursor -->
+    <div id="custom-cursor"></div>
+
+    <!-- CV Preview Modal -->
+    <div id="cv-modal" class="modal-overlay">
+        <div class="modal-content luxury-panel" style="max-width: 650px; max-height: 85vh; overflow-y: auto;">
+            <button id="close-cv-modal" class="modal-close">&times;</button>
+            <div class="dashboard-title">Official Curriculum Vitae</div>
+            <h3 style="margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 300;">DAVID SHAHARAH</h3>
+            <p style="color: var(--accent-gold); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem;">San Diego, CA | Junior Accountant & Analyst</p>
+            
+            <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                <p><strong>SUMMARY:</strong> Analytical, detail-oriented Junior Accountant with expertise in ADP/QuickBooks payroll, GAAP compliance, AR/AP billing, and business intelligence analytics.</p>
+                
+                <h4 style="color: var(--accent-gold); margin-top: 1.2rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Experience Highlights</h4>
+                <ul style="padding-left: 1.2rem;">
+                    <li><strong>C&D Towing (2021-Present):</strong> ADP & QuickBooks payroll for 150+ employees; GAAP journal entries; 200+ client billing.</li>
+                    <li><strong>Tax R Us (2017-2018):</strong> Managed office operations and client tax support.</li>
+                    <li><strong>A1 Sports Bar (2015-2018):</strong> Team leadership and operational management.</li>
+                </ul>
+
+                <h4 style="color: var(--accent-gold); margin-top: 1.2rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem;">Education & Credentials</h4>
+                <p>SDSU B.S. Business Finance (2020) | UCSD Business Intelligence & Google Data Analytics Certified</p>
+            </div>
+
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <button onclick="window.print()" class="btn btn-primary" style="flex: 1;">Print / Save as PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Connect Verification Modal -->
+    <div id="connect-modal" class="modal-overlay">
+        <div class="modal-content luxury-panel">
+            <button id="close-modal" class="modal-close">&times;</button>
+            <div class="dashboard-title">Security Verification</div>
+            <h3 style="margin-bottom: 1rem; color: var(--text-primary); font-weight: 300;">Verify to Connect</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;" id="modal-question-text">
+                In which California city is David based?
+            </p>
+            <form id="connect-challenge-form">
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <input type="text" id="challenge-answer" placeholder="YOUR ANSWER" required autocomplete="off">
+                </div>
+                <div id="modal-error" style="color: #ff6b6b; font-size: 0.85rem; margin-bottom: 1rem; display: none; text-transform: uppercase; letter-spacing: 1px;">
+                    Incorrect answer. Access denied. Please try again.
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Verify & Email</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
